@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OfflineMind – Cyfrowy Detox</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f6fa;
+      color: #2f3640;
+    }
+    header {
+      background: #00a8ff;
+      padding: 2rem;
+      color: white;
+      text-align: center;
+    }
+    header img.logo {
+      max-height: 80px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-family: 'Comfortaa', cursive;
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    nav {
+      background: #0097e6;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 3rem;
+      text-align: center;
+      background: #dff9fb;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem;
+    }
+    .feature {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 1rem;
+      padding: 2rem;
+      max-width: 300px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .feature:hover {
+      transform: scale(1.05);
+    }
+    .feature-content {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .feature.active .feature-content {
+      display: block;
+    }
+    .founders {
+      text-align: center;
+      margin: 2rem;
+    }
+    .founders img {
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 1rem auto;
+      display: block;
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .contact-form h3 {
+      margin-bottom: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background: #00a8ff;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #dcdde1;
+      margin-top: 2rem;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const features = document.querySelectorAll('.feature');
+      features.forEach(f => {
+        f.addEventListener('click', () => {
+          f.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="OfflineMind logo" class="logo">
+    <h1>OfflineMind</h1>
+    <p>Odzyskaj kontrolę nad swoim czasem</p>
+  </header>
+  <nav>
+    <a href="#features">Funkcje</a>
+    <a href="#about">O nas</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+  <section class="hero">
+    <h1>Cyfrowy detoks, który działa</h1>
+    <p>Zadbaj o zdrowie psychiczne i relacje, ograniczając nadmierne korzystanie z mediów społecznościowych. OfflineMind to Twój cyfrowy terapeuta i asystent.</p>
+  </section>
+  <section class="features" id="features">
+    <div class="feature">
+      <h3>Monitorowanie użycia</h3>
+      <p>Kliknij, aby dowiedzieć się więcej</p>
+      <div class="feature-content">
+        Aplikacja analizuje Twoje nawyki cyfrowe i pomaga rozpoznać momenty największej podatności na scrollowanie. Dzięki temu możesz zidentyfikować źródła uzależnienia.
+      </div>
+    </div>
+    <div class="feature">
+      <h3>Tryb Detox</h3>
+      <p>Kliknij, aby dowiedzieć się więcej</p>
+      <div class="feature-content">
+        Możesz zaplanować cyfrowe przerwy, które automatycznie blokują dostęp do mediów społecznościowych i wspierają zdrowe nawyki.
+      </div>
+    </div>
+    <div class="feature">
+      <h3>Wsparcie terapeutyczne</h3>
+      <p>Kliknij, aby dowiedzieć się więcej</p>
+      <div class="feature-content">
+        Korzystaj z krótkich ćwiczeń opartych na terapii poznawczo-behawioralnej, mindfulness i wsparcia specjalistów zdrowia psychicznego.
+      </div>
+    </div>
+  </section>
+  <section class="founders" id="about">
+    <h2>Twórcy OfflineMind</h2>
+    <img src="images/founders.jpg" alt="Twórcy Daniel Przytulski i Grzegorz Toporowski">
+    <p>OfflineMind zostało stworzone przez Daniela Przytulskiego i Grzegorza Toporowskiego – z pasji do równowagi między światem cyfrowym a rzeczywistym.</p>
+  </section>
+  <section class="contact-form" id="contact">
+    <h3>Formularz kontaktowy</h3>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Twoje imię" required>
+      <input type="email" name="email" placeholder="Twój e-mail" required>
+      <textarea name="message" rows="5" placeholder="Twoja wiadomość" required></textarea>
+      <button type="submit">Wyślij</button>
+    </form>
+  </section>
+  <footer>
+    <p>Masz pytania? Napisz do nas: kontakt@offlinemind.pl</p>
+    <p>Twórcy: Daniel Przytulski & Grzegorz Toporowski</p>
+    <p>&copy; 2025 OfflineMind</p>
+  </footer>
+</body>
+</html>
